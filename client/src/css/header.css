@@ -1,0 +1,136 @@
+/* .navbar .nav-link {
+    line-height: 1; 
+  }
+   */
+
+.navbar .nav-item p {
+    margin-bottom: 0;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    /* background-color: #f8f9fa; */
+    /* color: #212529; */
+    /* padding: 10px 15px; */
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    background-color: #343a40;
+    min-width: 100px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #ffffff; 
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+/* .navbar {
+    margin-bottom: 20px;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav .dropdown-menu {
+    margin-top: 0;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff;
+  }
+  
+  .navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+  } */
+  
+
+
+
+/* :root{
+    --bg: #005fdc;
+    --bg-accent: #4b99ff;
+    --text-color: #ffffff;
+    --nav-size: 60px;
+    --border: 1px solid #474a4d;
+    --border-radius: 8px;
+    --speed:500ms;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.navbar{
+    height: var(--nav-size);
+    background-color: var(--bg);
+    padding: 0 1rem;
+    border-bottom: var(--border);
+}
+
+.navbar-nav{ 
+    max-width: 100%; 
+    height: 100%;  
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+.nav-item{
+    width: calc(var(--nav-size)*0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button{
+    --button-size: calc(var(var(--nav-size)*0.5));
+    width: var(--button-size); 
+    height: var(--button-size); 
+    background-color: #484a4d; 
+    border-radius: 50%;
+    padding: 5px; 
+    margin: 2px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+} */
+
+/* .container-fluid{
+    font: red;
+    background-color: teal;
+} */

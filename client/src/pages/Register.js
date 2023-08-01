@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Form, Input, message } from "antd";
+import { Form, Input, Select, message } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spinner from './../components/Layout/Spinner';
+import { Option } from "antd/es/mentions";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ const Register = () => {
   //form submit
   const submitHandler = async (values) => {
     try {
+      // console.log(values);
       setLoading(true);
       await axios.post("/users/register", values);
       message.success("Registration Successful!");
@@ -44,6 +46,12 @@ const Register = () => {
           </Form.Item>
           <Form.Item label="Password" name="password">
             <Input type="password" />
+          </Form.Item>
+          <Form.Item label="User Role" name="role" initialValue="pi">
+            <Select>
+              <Option value="pi">Project PI</Option>
+              <Option value="cwdb">CWDB Personnel</Option>
+            </Select>
           </Form.Item>
           <div className="d-flex justify-content-between">
             <Link to="/login">Already registered? Click here</Link>

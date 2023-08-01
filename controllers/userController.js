@@ -1,18 +1,22 @@
 const userModel = require("./../models/userModel");
+const jwt = require('jsonwebtoken');
 
 //Login Callback
 const loginController = async (req, res) => {
   try {
-
-    const { email, password } = req.body;
-    const user = await userModel.findOne({ email, password });
+    // console.log(req.body);
+    const { email, password, role} = req.body;
+    const user = await userModel.findOne({ email, password, role });
     if (!user) {
+      console.log(req.body);
       res.status(404).send("User Not Found");
     }
-    res.status(200).json({
-      success: true,
-      user,
-    });
+    else {
+      res.status(200).json({
+        success: true,
+        user,
+      });
+    }
   } catch (error) {
     console.log(req.body)
     res.status(400).json({

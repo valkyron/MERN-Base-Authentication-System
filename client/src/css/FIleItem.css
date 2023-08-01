@@ -1,0 +1,32 @@
+.file-item li {
+    /* list-style: none; */
+    /* margin: 1.2em 0; */
+    /* background-color: #f55e3038; */
+    /* border-radius: 5px; */
+    /* display: flex; */
+    align-items: center;
+    padding: 0.5em 0.5em;
+    }
+    
+    .file-item  li svg {
+    color: #f55321;
+    }
+    
+   .file-item li svg:first-child {
+    font-size: 1.2em;
+    margin-right: 0.8em;
+    }
+    
+   .file-item li p {
+    flex: 1;
+    font-size: 0.9rem;
+    }
+    
+   .file-item li .actions {
+    justify-self: flex-end;
+    cursor: pointer;
+    }
+    
+   .file-item li .actions .fa-spinner {
+    font-size: 1.2em;
+    }

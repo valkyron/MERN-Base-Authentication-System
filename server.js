@@ -24,6 +24,8 @@ app.use(cors());
 
 //routes
 app.use('/api/v1/users', require('./routes/userRoute'))
+app.use('/api/v1/proposals', require('./routes/proposalRoute'))
+
 // app.use('/api/v1', createProxyMiddleware({
 //   target: 'https://localhost:8080',
 //   changeOrigin: true,
@@ -42,4 +44,16 @@ const PORT = 8080 || process.env.PORT;
 //listen server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+});
+
+app.post("/upload", (req, res) => {
+  setTimeout(() => {
+    console.log("File uploaded")
+    return res.status(200).json({result: true, msg:'file uploaded'})
+  }, 3000)
+})
+
+app.delete("/upload", (req, res) => {
+  console.log(`File deleted`)
+  return res.status(200).json({ result: true, msg: 'file deleted' });
 });
