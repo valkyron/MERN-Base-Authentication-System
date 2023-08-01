@@ -1,15 +1,20 @@
 import {Navigate, Route, Routes} from 'react-router-dom'
-import HomePage from './pages/HomePage';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import ProposalPage from './pages/ProposalPage';
 import Proposals from './pages/Proposals';
+import Portal from './pages/Portal';
+import HomePage from './pages/HomePage';
 
 function App() {
+  //validate token after app load
+  // /validate
+  
   return (
     <>
       <Routes>
-        <Route path="/" element={<ProtectedRoutes><HomePage /></ProtectedRoutes>} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/" element={<ProtectedRoutes><Portal /></ProtectedRoutes>} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/projectproposal" element={<PIRoutes><ProposalPage /></PIRoutes>} />
@@ -29,7 +34,7 @@ export function ProtectedRoutes(props) {
     // const user = JSON.parse(localStorage.getItem('user'));
     return props.children;
   } else {
-    return <Navigate to="/login"/>
+    return <Navigate to="/home"/>
   }
 }
 
@@ -43,7 +48,7 @@ export function PIRoutes(props) {
       return <Navigate to="/"/>
     }
   } else {
-    return <Navigate to="/login"/>
+    return <Navigate to="/home"/>
   }
 }
 
@@ -57,7 +62,7 @@ export function CWDBRoutes(props) {
       return <Navigate to="/"/>
     }
   } else {
-    return <Navigate to="/login"/>
+    return <Navigate to="/home"/>
   }
 }
 

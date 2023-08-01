@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const colors = require("colors");
 const connectDb = require("./config/connectDb");
+const deserializeUser = require("./middlewares/deserializeUser");
+const cookieParser = require("cookie-parser");
 
 //config dot env file
 dotenv.config()
@@ -17,10 +19,14 @@ const app = express();
 // const agent = new https.Agent({
 //     rejectUnauthorized: false
 // });
+
+
 //middlewares
 app.use(cors());
 app.use(express.json());
 app.use(cors());
+// app.use(cookieParser);
+app.use(deserializeUser);
 
 //routes
 app.use('/api/v1/users', require('./routes/userRoute'))

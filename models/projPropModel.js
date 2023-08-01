@@ -115,6 +115,10 @@ const projpropSchema = mongoose.Schema(
       type: String,
       required: [true, "Project Title is required"],
     },
+    status: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: false }
 );
