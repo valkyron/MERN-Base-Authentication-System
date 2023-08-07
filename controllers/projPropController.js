@@ -28,6 +28,7 @@ const getDraftProposal = async (req, res) => {
 
 const ProposeNew = async (req, res) => {
     try {
+        console.log(req.body);
         const newproposal = new proposalModel(req.body);
         await newproposal.save()
         res.status(201).send('proposal created');

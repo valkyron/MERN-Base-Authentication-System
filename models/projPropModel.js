@@ -23,8 +23,68 @@ const projpropSchema = mongoose.Schema(
       type: String,
       required: false,
     },
-    PIedQualif: {
-      type: Array,
+    edqfirstdegree: {
+      type: String,
+      required: false,
+    },
+    edqfirstyear: {
+      type: String,
+      required: false,
+    },
+    edqfirstsubject: {
+      type: String,
+      required: false,
+    },
+    edqfirstinstitution: {
+      type: String,
+      required: false,
+    },
+    edq2nddegree: {
+      type: String,
+      required: false,
+    },
+    edq2ndyear: {
+      type: String,
+      required: false,
+    },
+    edq2ndsubject: {
+      type: String,
+      required: false,
+    },
+    edq2ndinstitution: {
+      type: String,
+      required: false,
+    },
+    edq3rddegree: {
+      type: String,
+      required: false,
+    },
+    edq3rdyear: {
+      type: String,
+      required: false,
+    },
+    edq3rdsubject: {
+      type: String,
+      required: false,
+    },
+    edq3rdinstitution: {
+      type: String,
+      required: false,
+    },
+    edq4thdegree: {
+      type: String,
+      required: false,
+    },
+    edq4thyear: {
+      type: String,
+      required: false,
+    },
+    edq4thsubject: {
+      type: String,
+      required: false,
+    },
+    edq4thinstitution: {
+      type: String,
       required: false,
     },
     orgAddress: {
@@ -40,7 +100,7 @@ const projpropSchema = mongoose.Schema(
       required: false,
     },
     budget: {
-      type: Number,
+      type: String,
       required: false,
     },
     budgetSummary: {

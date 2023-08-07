@@ -25,13 +25,13 @@ const Navbar = () => {
   //   }
   // `;
 
-  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+  // const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   // const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-  const handleNavCollapse = () => {
-    setIsNavCollapsed(!isNavCollapsed);
-    console.log("isNavCollapsed", isNavCollapsed);
-  };
+  // const handleNavCollapse = () => {
+  //   setIsNavCollapsed(!isNavCollapsed);
+  //   console.log("isNavCollapsed", isNavCollapsed);
+  // };
 
   // const closeNav = () => {
   //   setIsNavCollapsed(true);
@@ -57,7 +57,7 @@ const Navbar = () => {
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
       <nav>
         <input type="checkbox" id="check"/>
-        <label for="check" className="checkbtn">
+        <label htmlFor="check" className="checkbtn">
           <i className="fas fa-bars"></i>
         </label>
         <ul>

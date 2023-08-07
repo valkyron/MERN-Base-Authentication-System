@@ -5,6 +5,7 @@ import ProposalPage from './pages/ProposalPage';
 import Proposals from './pages/Proposals';
 import Portal from './pages/Portal';
 import HomePage from './pages/HomePage';
+// import deserializeUser from '../../middlewares/deserializeUser';
 
 function App() {
   //validate token after app load
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <Routes>
+        {/* <Route path="/validate" element={<deser />} /> */}
         <Route path="/home" element={<HomePage />} />
         <Route path="/" element={<ProtectedRoutes><Portal /></ProtectedRoutes>} />
         <Route path="/register" element={<Register />} />
