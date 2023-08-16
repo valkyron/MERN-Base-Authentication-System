@@ -38,7 +38,7 @@
 .container .form { 
     position: relative; 
     margin-top: 16px; 
-    min-height: 1420px; 
+    min-height: 920px; 
     background-color: #fff;
     overflow: hidden;
 }
@@ -223,9 +223,10 @@
     margin-right: 14px; 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 890px) {
     .container .form {
         overflow-y: hidden;
+        overflow-x: scroll;
     }
 
     /* .container .form::-webkit-scrollbar {

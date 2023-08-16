@@ -3,10 +3,30 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileAlt, faSpinner, faTrash } from '@fortawesome/free-solid-svg-icons'
 import '../../css/FIleItem.css'
 
-const FileItem = ({ file, deleteFile }) => {
+const FileItem = ({ file, fileType, deleteFile }) => {
     return (
         <>
-            <li
+            <li className="file-item" key={file.name}>
+                <FontAwesomeIcon icon={faFileAlt} />
+                <p>{file.name}</p>
+                <div className="actions">
+                <div className="loading"></div>
+                {file.isUploading && (
+                    <FontAwesomeIcon
+                    icon={faSpinner}
+                    className="fa-spin"
+                    onClick={() => deleteFile(fileType)} 
+                    />
+                )}
+                {!file.isUploading && (
+                    <FontAwesomeIcon
+                    icon={faTrash}
+                    onClick={() => deleteFile(fileType)} 
+                    />
+                )}
+                </div>
+            </li>
+            {/* <li
                 className="file-item"
                 key={file.name}>
                 <FontAwesomeIcon icon={faFileAlt} />
@@ -22,7 +42,7 @@ const FileItem = ({ file, deleteFile }) => {
                             onClick={() => deleteFile(file.name)} />
                     }
                 </div>
-            </li>
+            </li> */}
         </>
     )
 }

@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  background-color: #f55e30;
+  background-color: #4070f4;
   font-size: 1.1rem;
   cursor: pointer;
   border-radius: 4px;
@@ -42,21 +42,45 @@
   transition: background-color 0.4s;
   box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.5);
 }
+
+.final {
+  position: relative;
+  /* top: 0px; */
+  /* left: 0px; */
+  width: 120px;
+  height: 50px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #4070f4;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  transition: background-color 0.4s;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.5);
+}
+
 .file-card .file-inputs button i {
   width: 1.5em;
   height: 1.5em;
   padding: 0.4em;
   background-color: #fff;
-  color: #f55e30;
+  color:  #305bcc ;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 0.8em;
   font-size: 0.8em;
+  cursor: pointer;
 }
-.file-card .file-inputs:hover button {
-  background-color: #f15120;
+.file-card .file-inputs:hover button, .final:hover {
+  background-color: #305bcc;
+  cursor: pointer;
 }
 .main {
   font-weight: bold;
@@ -64,4 +88,20 @@
 }
 .info {
   font-size: 0.8rem;
+}
+
+.document-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em; /* Increase the margin for more space */
+}
+
+.document-list-item span {
+  margin-right: 1em; /* Add space between text and button */
+}
+
+.file-card .file-inputs button {
+  /* Other styles... */
+  margin-left: 1em; /* Add space between icon and text */
 }
